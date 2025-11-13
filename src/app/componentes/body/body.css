@@ -1,11 +1,5 @@
-/* Asegurar que el componente ocupe todo */
-:host {
-    display: block;
-    background-color: #000000;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+
+
   /* Main content */
   .main-content {
     display: flex;
@@ -20,14 +14,19 @@
   .descripcion {
     width: 20%;
     max-width: 1200px;
-    margin-left: 500px;
+    margin-left: 450px;
     background-color: #000000;
+    
   }
   
   .descripcion h2 {
     color: #ffffff;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .seccion-ediciones h2{
+    font-size: 2rem;
   }
   
   .descripcion p {
@@ -46,7 +45,7 @@
   .imagen-wrapper {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 420px;
     overflow: hidden;
     border-radius: 5px;
     cursor: pointer;
@@ -82,22 +81,50 @@
     padding: 1rem;
     transform: translateY(20px);
     transition: transform 0.4s ease;
+    text-decoration: none;
   }
   
   /* Efecto hover */
   .imagen-wrapper:hover .imagen {
-    filter: brightness(1.5) contrast(0.8);
+    filter: brightness(1.1) contrast(0.3);
     transform: scale(1.05);
   }
   
   .imagen-wrapper:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.514);
     opacity: 1;
   }
   
   .imagen-wrapper:hover .overlay-text {
     transform: translateY(0);
   }
+
+  .seccion-ediciones {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 50px;
+}
+
+.imagen-ediciones {
+  display: flex;               /* Pone las imágenes en fila */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  gap: 60px;   
+  margin-top: 50px; 
+   transition: all 0.4s ease;               
+}
+
+.imagen:hover{
+    transform: scale(1.05);
+
+}
+
+.imagen-ediciones .imagen {
+  width: 250px;                /* Tamaño fijo para que quepan */
+  height: auto;
+  display: block;
+}
+
   
   /* Responsive */
   @media (max-width: 768px) {

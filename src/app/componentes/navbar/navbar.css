@@ -25,7 +25,7 @@ nav {
 .navbar-logo {
     width: 200px; 
     height: 200px;
-    object-fit: cover; /* mantiene proporciones */ /* opcional: lo hace circular */
+    object-fit: cover; 
     transition: transform 0.3s ease;
     cursor: pointer;
   }
@@ -59,7 +59,7 @@ nav h2 {
   align-items: center;
   margin-top: 2px;
   font-weight: bold;
-  font-size: 17px;
+  font-size:19px;
 }
 
 /* Enlaces estilo botón con efecto */
@@ -86,12 +86,14 @@ nav h2 {
   content: "";
   position: absolute;
   width: 0%;
-  height: 2px;
-  bottom: 0;
+  height: 4px;
+  bottom: -7px;
   left: 0;
   background-color: #ff2d55;
   transition: width 0.3s ease;
-  border-radius: 2px;
+  border-radius: 12px;
+ 
+  
 }
 
 .navbar-links a:hover::after {
