@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+nav {
+
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* LOGO */
+.navbar-logo {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover; /* mantiene proporciones */ /* opcional: lo hace circular */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .navbar-logo:hover {
+    transform: scale(1.05);
+  }
+  
+
+/* Contenedor interno centrado verticalmente */
+.navbar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Título encima de los links */
+nav h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Lista de enlaces */
+.navbar-links {
+  margin-left: 50px;
+  display: flex;
+  list-style: none;
+  gap: 6rem;
+  align-items: center;
+  margin-top: 2px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* Enlaces estilo botón con efecto */
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Efecto hover con expansión */
+.navbar-links a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Línea inferior animada */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff2d55;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}

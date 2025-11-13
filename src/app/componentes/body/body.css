@@ -1,0 +1,108 @@
+/* Asegurar que el componente ocupe todo */
+:host {
+    display: block;
+    background-color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* Main content */
+  .main-content {
+    display: flex;
+    width: 100%;
+    padding: 200px 2rem 50px 2rem;
+    margin: 0;
+    gap: 1rm;
+    background-color: #000000;
+  }
+  
+  /* Descripción - ocupa todo el ancho */
+  .descripcion {
+    width: 20%;
+    max-width: 1200px;
+    margin-left: 500px;
+    background-color: #000000;
+  }
+  
+  .descripcion h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .descripcion p {
+    color: #d3d3d3;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  /* Imagen - lado derecho */
+.imagen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.4s ease;
+  }
+  
+  /* Overlay con texto */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .overlay-text {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+  }
+  
+  /* Efecto hover */
+  .imagen-wrapper:hover .imagen {
+    filter: brightness(1.5) contrast(0.8);
+    transform: scale(1.05);
+  }
+  
+  .imagen-wrapper:hover .overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+  }
+  
+  .imagen-wrapper:hover .overlay-text {
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      padding: 150px 1rem 30px 1rem;
+    }
+  }
