@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './componentes/navbar/navbar';
 import { Footer } from './componentes/footer/footer';
-
 import { Body } from './componentes/body/body';
 
 @Component({
@@ -15,3 +14,4 @@ import { Body } from './componentes/body/body';
 export class App {
   title = signal('mi-proyecto');
 }
+
